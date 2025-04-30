@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "xr": "../../components/xr"
+    "xr": "../../components/xr",
+    "operators": "../../components/operators"
   },
-  "disableScroll": true
+  "disableScroll": false
 }
