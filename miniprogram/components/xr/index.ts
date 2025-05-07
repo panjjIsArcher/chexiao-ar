@@ -27,5 +27,11 @@ Component({
         this.setData({ visible: true, done: true });
       });
     },
+    persist(e) {
+      console.info(e);
+    },
+    overlap(e) {
+      console.info(e);
+    },
   },
 });
