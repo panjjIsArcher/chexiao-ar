@@ -1,3 +1,5 @@
 <xr-scene >
-	<xr-camera clear-color="0.4 0.8 0.6 1"  />
+	<xr-camera clear-color="0.4 0.8 0.6 1"  position="0 1 4"/>
+	<xr-light type="ambient" color="1 1 1" intensity="1" /> 
+	<xr-mesh node-id="cube" geometry="cube" />
 </xr-scene>
