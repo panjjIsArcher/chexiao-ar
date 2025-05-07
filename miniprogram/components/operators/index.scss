@@ -2,11 +2,15 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  color: red;
+  color: rgba(0, 0, 0, 0.6);
   .btn {
     border: 1px solid #ccc;
     padding: 15rpx 0;
     flex: 1;
     text-align: center;
+    &:active,
+    &:focus {
+      background-color: #ccc;
+    }
   }
 }

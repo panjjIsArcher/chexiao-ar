@@ -1,7 +1,7 @@
 
 <view class="btns">
-	<view class="btn">功能1</view>
-	<view class="btn">功能2</view>	
+	<view class="btn" bindtap="changeModel" data-model="default">默认功能</view>	
+  <view class="btn" bindtap="changeModel" data-model="planeMode">AR追踪</view>
 	<view class="btn">功能3</view>	
 	<view class="btn">功能4</view>
 </view>
