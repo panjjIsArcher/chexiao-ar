@@ -5,7 +5,7 @@
 	
   <!-- 默认样式 -->
 	<xr-camera  id="camera"  position="0 1 4" camera-orbit-control target="cube"/>
-	<xr-mesh node-id="cube" geometry="cube" cast-shadow  wx:if="{{model==='default'}}"/>
+	<xr-mesh  wx:if="{{model==='default'}}" node-id="cube" geometry="cube" cast-shadow />
 	<xr-mesh wx:if="{{model==='default'}}" position="0 -1 0" node-id="plane" scale="10 1 10" receive-shadow geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" />
 	
 	<!-- AR地面识别 -->
@@ -31,9 +31,9 @@
 	<!-- OSD Marker -->
   <xr-ar-tracker wx:if="{{model==='OSD'}}" mode="OSD"></xr-ar-tracker>
 
-	<xr-physics wx:if="{{model==='physics'}}" />
-	<xr-mesh wx:if="{{model==='physics'}}"  node-id="cube" geometry="cube" cast-shadow  uniforms="u_baseColorFactor:0.4 0.3 0.8 1" />
-	<xr-mesh wx:if="{{model==='physics'}}" position="0 -1 0" node-id="plane" scale="10 1 10" receive-shadow geometry="plane" uniforms="u_baseColorFactor:0.4 0 0.8 1" />
+	<xr-physics  />
+	<xr-mesh wx:if="{{model==='physics'}}" rigidbody="mass:1;useGravity:true"  node-id="cube" geometry="cube" cast-shadow  uniforms="u_baseColorFactor:0.4 0.3 0.8 1" />
+	<xr-mesh wx:if="{{model==='physics'}}" rigidbody="mass:1;useGravity:false"  node-id="plane" scale="10 1 10" receive-shadow geometry="plane" position="0 -1 0"  uniforms="u_baseColorFactor:0.4 0 0.8 1" />
 
 </xr-scene>
 
