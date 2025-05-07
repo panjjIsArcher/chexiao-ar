@@ -1,6 +1,8 @@
 interface Systems {
   default: string; // 默认系统
   planeMode: string; // 平面识别模式
+  face: string; // 面部识别模式
+  OSD: string; // One-shot Detection Marker识别
 }
 
 Page({
@@ -33,6 +35,8 @@ Page({
       default: "default",
       planeMode:
         "modes:Plane; planeMode: 1; depthMask: true; depthNear: 0.1; depthFar: 100; depthDebug: true;",
+      face: "modes:Face;camera:Front;",
+      OSD: "modes:OSD;",
     };
     return systems[model] || "default";
   },

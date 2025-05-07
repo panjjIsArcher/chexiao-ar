@@ -23,5 +23,13 @@
     <xr-asset-load type="gltf" asset-id="miku" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb" />
   </xr-assets>
 	<xr-camera wx:if="{{model==='planeMode'}}" id="camera" is-ar-camera background="ar" position="0 1 4" clear-color="0.4 0.8 0.6 1"/>
+
+	<!-- AR人脸识别 -->
+  <xr-ar-tracker wx:if="{{model==='face'}}" mode="Face"></xr-ar-tracker>
+
+
+	<!-- OSD Marker -->
+  <xr-ar-tracker wx:if="{{model==='OSD'}}" mode="OSD"></xr-ar-tracker>
+
 </xr-scene>
 
