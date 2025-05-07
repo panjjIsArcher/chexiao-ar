@@ -34,6 +34,8 @@
 	<xr-physics  />
 	<xr-mesh wx:if="{{model==='physics'}}" rigidbody="mass:1;useGravity:true"  node-id="cube" geometry="cube" cast-shadow  uniforms="u_baseColorFactor:0.4 0.3 0.8 1" />
 	<xr-mesh wx:if="{{model==='physics'}}" rigidbody="mass:1;useGravity:false"  node-id="plane" scale="10 1 10" receive-shadow geometry="plane" position="0 -1 0"  uniforms="u_baseColorFactor:0.4 0 0.8 1" />
-
+	<!--轮廓-->
+	<xr-mesh wx:if="{{model==='physics'}}" rigidbody="mass:1;useGravity:true" cube-shape shape-gizmo geometry="cube"  uniforms="u_baseColorFactor:0.4 0.3 0.8 1" />
+	<xr-mesh wx:if="{{model==='physics'}}" rigidbody="mass:1;useGravity:false" cube-shape shape-gizmo geometry="plane" position="0 -1 0"  uniforms="u_baseColorFactor:0.4 0 0.8 1" />
 </xr-scene>
 
