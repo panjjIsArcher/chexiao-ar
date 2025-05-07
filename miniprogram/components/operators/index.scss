@@ -1,7 +1,6 @@
 .btns {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   color: rgba(0, 0, 0, 0.6);
   .btn {
     border: 1px solid #ccc;

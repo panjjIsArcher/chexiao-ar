@@ -1,7 +1,8 @@
 
 <view class="btns">
-	<view class="btn" bindtap="changeModel" data-model="default">默认功能</view>	
+	<view class="btn" bindtap="changeModel" data-model="default">默认</view>	
   <view class="btn" bindtap="changeModel" data-model="planeMode">AR追踪</view>
 	<view class="btn" bindtap="changeModel" data-model="face">人类识别</view>	
-	<view class="btn"  bindtap="changeModel" data-model="body">OSD</view>
+	<view class="btn"  bindtap="changeModel" data-model="OSD">OSD</view>
+	<view class="btn"  bindtap="changeModel" data-model="physics">物理引擎</view>
 </view>

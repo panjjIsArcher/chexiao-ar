@@ -3,6 +3,7 @@ interface Systems {
   planeMode: string; // 平面识别模式
   face: string; // 面部识别模式
   OSD: string; // One-shot Detection Marker识别
+  physics: string; // 物理刚体
 }
 
 Page({
@@ -27,7 +28,7 @@ Page({
   }) {
     const model = e?.detail?.currentTarget?.dataset?.model ?? "default";
     const arSystem = this.setSystem(model);
-    console.info(arSystem);
+    console.info(arSystem, model);
     this.setData({ model, arSystem });
   },
   setSystem(model: string): string {
@@ -37,7 +38,8 @@ Page({
         "modes:Plane; planeMode: 1; depthMask: true; depthNear: 0.1; depthFar: 100; depthDebug: true;",
       face: "modes:Face;camera:Front;",
       OSD: "modes:OSD;",
+      physics: "",
     };
-    return systems[model] || "default";
+    return systems[model] || "";
   },
 });
