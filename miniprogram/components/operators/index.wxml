@@ -1,4 +1,7 @@
 
 <view class="btns">
-	<view class="btn">测试</view>
+	<view class="btn">功能1</view>
+	<view class="btn">功能2</view>	
+	<view class="btn">功能3</view>	
+	<view class="btn">功能4</view>
 </view>

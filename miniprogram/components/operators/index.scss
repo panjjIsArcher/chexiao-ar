@@ -1,7 +1,12 @@
 .btns {
   display: flex;
+  justify-content: space-around;
   width: 100%;
   color: red;
   .btn {
+    border: 1px solid #ccc;
+    padding: 15rpx 0;
+    flex: 1;
+    text-align: center;
   }
 }

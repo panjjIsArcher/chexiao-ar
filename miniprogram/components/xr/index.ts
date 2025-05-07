@@ -3,6 +3,4 @@ Component({
     width: Number,
     height: Number,
   },
-  data: {},
-  methods: {},
 });
