@@ -31,8 +31,8 @@ Page({
   setSystem(model: string): string {
     const systems: Systems = {
       default: "default",
-      planeMode: "modes:Plane",
-      // "modes:Plane; planeMode: 1; depthMask: true; depthNear: 0.1; depthFar: 100; depthDebug: true;",
+      planeMode:
+        "modes:Plane; planeMode: 1; depthMask: true; depthNear: 0.1; depthFar: 100; depthDebug: true;",
     };
     return systems[model] || "default";
   },

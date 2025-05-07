@@ -11,11 +11,11 @@
 	<!-- AR地面识别 -->
   <xr-ar-tracker wx:if="{{model==='planeMode'}}"  mode="Plane"  >
 	 	<!-- 锚定模型 -->
-	  <xr-gltf model="anchor" />
+	  <xr-gltf model="anchor" visible="{{!visible}}" />
 	</xr-ar-tracker>
 	<!--识别模型 -->
   <xr-node node-id="setitem"  visible="false" wx:if="{{model==='planeMode'}}" >
-    <xr-gltf model="miku" anim-autoplay rotation="0 180 0"  scale="0.08 0.08 0.08"/>
+    <xr-gltf model="miku" anim-autoplay rotation="0 180 0" scale="0.06 0.06 0.06"/>
   </xr-node>
 	<!-- 资源下载 -->
 	<xr-assets bind:loaded="handleAssetsLoaded">

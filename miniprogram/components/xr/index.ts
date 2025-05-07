@@ -1,6 +1,7 @@
 Component({
   data: {
     visible: false,
+    done: false,
   },
   properties: {
     model: {
@@ -20,11 +21,10 @@ Component({
         .getComponent(xrFrameSystem.Camera);
     },
     handleAssetsLoaded() {
-      wx.showToast({ title: "点击屏幕放置" });
       this.scene.event.add("touchstart", () => {
-        console.info(" this.scene", this.scene.ar);
-        this.setData({ visible: true });
+        if (this.data.done) return;
         this.scene.ar.placeHere("setitem", true);
+        this.setData({ visible: true, done: true });
       });
     },
   },
