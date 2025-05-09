@@ -7,9 +7,7 @@
 	<xr-camera  id="camera"  position="0 1 4" camera-orbit-control target="cube"/>
 	<xr-mesh  wx:if="{{model==='default'}}" node-id="cube" geometry="cube" cast-shadow />
 	<xr-mesh wx:if="{{model==='default'}}" position="0 -1 0" node-id="plane" scale="10 1 10" receive-shadow geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" />
-	<xr-node wx:if="{{model==='default'}}">
-    <xr-gltf id="ring" model="ring" />
-  </xr-node>
+	
 	
 	<!-- AR地面识别 -->
   <xr-ar-tracker wx:if="{{model==='planeMode'}}"  mode="Plane"   id="tracker" >
@@ -31,12 +29,9 @@
 	<xr-camera wx:if="{{model==='hand'}}"  id="camera" node-id="camera" clear-color="0.925 0.925 0.925 1" background="ar" is-ar-camera near="0.01" />
 	<xr-ar-tracker wx:if="{{model==='hand'}}" mode="Hand"  id="tracker"  auto-sync="14" >
  	<xr-node wx:if="{{model==='hand'}}">
-    <xr-gltf id="ring" model="ring" />
+    
   </xr-node>
 	</xr-ar-tracker>
-  <xr-assets>
-    <xr-asset-load type="gltf" asset-id="ring" src="ring.glb" />
-  </xr-assets>
 
 	<!-- AR人脸识别 -->
   <xr-ar-tracker wx:if="{{model==='face'}}" mode="Face" id="tracker"></xr-ar-tracker>
@@ -44,9 +39,7 @@
 	<!-- OSD Marker -->
   <xr-ar-tracker wx:if="{{model==='OSD'}}" mode="OSD"  id="tracker" ></xr-ar-tracker>
 
-	<xr-physics  disabled="{{false}}"  />
 
- 
-	
+
 </xr-scene>
 
