@@ -2,41 +2,31 @@ Component({
   data: {
     visible: false,
     done: false,
+    scene: null,
   },
   properties: {
     model: {
       type: String,
-      value: "default",
+      value: "",
     },
-    arSystem: { type: String, value: "default" },
+    arSystem: { type: String, value: "" },
     width: Number,
     height: Number,
   },
   methods: {
     handleReady({ detail }) {
-      this.scene = detail.value;
-      const xrFrameSystem = wx.getXrFrameSystem();
-      this.camera = detail.value
-        .getElementById("camera")
-        .getComponent(xrFrameSystem.Camera);
+      this.setData({ scene: detail.value });
+      this.handleAssetsLoaded();
     },
     handleAssetsLoaded() {
-      this.scene.event.add("touchstart", () => {
+      if (!this.data.scene) {
+        return;
+      }
+      this.data.scene.event.add("touchstart", () => {
         if (this.data.done) return;
-        this.scene.ar.placeHere("setitem", true);
+        this.data.scene.ar.placeHere("setitem", true);
         this.setData({ visible: true, done: true });
       });
-    },
-    handleOverlapBegin(e) {
-      console.info(e);
-    },
-    handleTick({ detail }) {
-      const xrFrameSystem = wx.getXrFrameSystem();
-      this.tracker = this.scene
-        ?.getElementById("tracker")
-        ?.getComponent(xrFrameSystem.ARTracker);
-      if (this.tracker) {
-      }
     },
   },
 });

@@ -1,45 +1,24 @@
 
-<xr-scene ar-system="{{arSystem}}" bind:ready="handleReady" bind:tick="handleTick">
+<xr-scene ar-system="{{arSystem}}" bind:ready="handleReady"  >
 	<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
 	<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
-	
-  <!-- 默认样式 -->
-	<xr-camera  id="camera"  position="0 1 4" camera-orbit-control target="cube"/>
-	<xr-mesh  wx:if="{{model==='default'}}" node-id="cube" geometry="cube" cast-shadow />
-	<xr-mesh wx:if="{{model==='default'}}" position="0 -1 0" node-id="plane" scale="10 1 10" receive-shadow geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" />
-	
-	
-	<!-- AR地面识别 -->
-  <xr-ar-tracker wx:if="{{model==='planeMode'}}"  mode="Plane"   id="tracker" >
-	 	<!-- 锚定模型 -->
-	  <xr-gltf model="anchor" visible="{{!visible}}" />
-	</xr-ar-tracker>
-	<!--识别模型 -->
-  <xr-node node-id="setitem"  visible="false" wx:if="{{model==='planeMode'}}" >
-    <xr-gltf model="miku" anim-autoplay rotation="0 180 0" scale="0.06 0.06 0.06"/>
-  </xr-node>
-	<!-- 资源下载 -->
-	<xr-assets bind:loaded="handleAssetsLoaded">
-    <xr-asset-load type="gltf" asset-id="anchor" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/ar-plane-marker.glb" />
-    <xr-asset-load type="gltf" asset-id="miku" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb" />
-  </xr-assets>
-	<xr-camera wx:if="{{model==='planeMode'}}" id="camera" is-ar-camera background="ar" position="0 1 4" clear-color="0.4 0.8 0.6 1"/>
+	<xr-camera id="camera"  is-ar-camera background="ar" clear-color="0.4 0.8 0.6 1"/>
 
-	<!-- 手势识别 -->
-	<xr-camera wx:if="{{model==='hand'}}"  id="camera" node-id="camera" clear-color="0.925 0.925 0.925 1" background="ar" is-ar-camera near="0.01" />
-	<xr-ar-tracker wx:if="{{model==='hand'}}" mode="Hand"  id="tracker"  auto-sync="14" >
- 	<xr-node wx:if="{{model==='hand'}}">
-    
-  </xr-node>
-	</xr-ar-tracker>
-
-	<!-- AR人脸识别 -->
-  <xr-ar-tracker wx:if="{{model==='face'}}" mode="Face" id="tracker"></xr-ar-tracker>
-
-	<!-- OSD Marker -->
-  <xr-ar-tracker wx:if="{{model==='OSD'}}" mode="OSD"  id="tracker" ></xr-ar-tracker>
-
+	<!-- 平面追踪 -->
+	<xr-node wx:if="model === 'planeMode'">
+		<xr-assets bind:loaded="handleAssetsLoaded">
+			<xr-asset-load type="gltf" asset-id="anchor" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/ar-plane-marker.glb" />
+			<xr-asset-load type="gltf" asset-id="miku" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb" />
+		</xr-assets>
+		<xr-ar-tracker mode="Plane">
+				<xr-gltf model="anchor" wx:if="{{!visible}}"></xr-gltf>
+		</xr-ar-tracker>
+		<xr-node node-id="setitem" visible="{{visible}}">
+			<xr-gltf model="miku" anim-autoplay scale="0.08 0.08 0.08" rotation="0 180 0"/>
+		</xr-node>
+	</xr-node>
 
 
 </xr-scene>
+
 

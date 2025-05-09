@@ -1,6 +1,6 @@
 Component({
   methods: {
-    changeModel(model: string = "default") {
+    changeModel(model: string = "") {
       this.triggerEvent("changeModel", model);
     },
   },

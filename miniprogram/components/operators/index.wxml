@@ -1,6 +1,6 @@
 
 <view class="btns">
-	<view class="btn" bindtap="changeModel" data-model="default">默认</view>	
+	
   <view class="btn" bindtap="changeModel" data-model="planeMode">平面追踪</view>
 	<view class="btn" bindtap="changeModel" data-model="face">人脸识别</view>	
 	<view class="btn" bindtap="changeModel" data-model="hand">手势识别</view>	
