@@ -1,5 +1,5 @@
 
-<xr-scene ar-system="{{arSystem}}" bind:ready="handleReady">
+<xr-scene ar-system="{{arSystem}}" bind:ready="handleReady" bind:tick="handleTick">
 	<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
 	<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
 	
@@ -9,7 +9,7 @@
 	<xr-mesh wx:if="{{model==='default'}}" position="0 -1 0" node-id="plane" scale="10 1 10" receive-shadow geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" />
 	
 	<!-- AR地面识别 -->
-  <xr-ar-tracker wx:if="{{model==='planeMode'}}"  mode="Plane"  >
+  <xr-ar-tracker wx:if="{{model==='planeMode'}}"  mode="Plane"   id="tracker" >
 	 	<!-- 锚定模型 -->
 	  <xr-gltf model="anchor" visible="{{!visible}}" />
 	</xr-ar-tracker>
@@ -24,17 +24,26 @@
   </xr-assets>
 	<xr-camera wx:if="{{model==='planeMode'}}" id="camera" is-ar-camera background="ar" position="0 1 4" clear-color="0.4 0.8 0.6 1"/>
 
-	<!-- AR人脸识别 -->
-  <xr-ar-tracker wx:if="{{model==='face'}}" mode="Face"></xr-ar-tracker>
+	<!-- 手势识别 -->
+	<xr-camera wx:if="{{model==='hand'}}"  id="camera" node-id="camera" clear-color="0.925 0.925 0.925 1" background="ar" is-ar-camera near="0.01" />
+	<xr-ar-tracker wx:if="{{model==='hand'}}" mode="Hand"  id="tracker"  auto-sync="14" >
+ 	<xr-node wx:if="{{model==='hand'}}">
+    <xr-gltf id="ring" model="ring" />
+  </xr-node>
+	</xr-ar-tracker>
+  <xr-assets>
+    <xr-asset-load type="gltf" asset-id="ring" src="../../assets/ring.glb" />
+  </xr-assets>
 
+	<!-- AR人脸识别 -->
+  <xr-ar-tracker wx:if="{{model==='face'}}" mode="Face" id="tracker"></xr-ar-tracker>
 
 	<!-- OSD Marker -->
-  <xr-ar-tracker wx:if="{{model==='OSD'}}" mode="OSD"></xr-ar-tracker>
+  <xr-ar-tracker wx:if="{{model==='OSD'}}" mode="OSD"  id="tracker" ></xr-ar-tracker>
 
-	<xr-physics  />
-	<!--网格物体-->
-	<xr-mesh wx:if="{{model==='physics'}}"  shape-gizmo bind:overlap-begin="overlap"  shape-interact cube-shape bind:collide-persist="persist" disabled="{{false}}" dynamicFriction="{{0.7}}" collide="{{true}}"  rigidbody="mass:1;useGravity:true"  geometry="cube" uniforms="u_baseColorFactor:0.4 0.3 0.8 1" />
-	<xr-mesh wx:if="{{model==='physics'}}"  shape-gizmo bind:overlap-begin="overlap"  shape-interact cube-shape disabled="{{false}}" dynamicFriction="{{0.7}}" collide="{{true}}"  rigidbody="mass:1;useGravity:false"  node-id="plane" scale="10 1 10"  geometry="plane" position="0 -1 0"  />
+	<xr-physics  disabled="{{false}}"  />
+
+ 
 	
 </xr-scene>
 

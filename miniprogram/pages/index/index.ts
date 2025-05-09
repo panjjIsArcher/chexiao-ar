@@ -4,6 +4,7 @@ interface Systems {
   face: string; // 面部识别模式
   OSD: string; // One-shot Detection Marker识别
   physics: string; // 物理刚体
+  hand: string; // 手势识别模式
 }
 
 Page({
@@ -39,6 +40,7 @@ Page({
       face: "modes:Face;camera:Front;",
       OSD: "modes:OSD;",
       physics: "",
+      hand: "modes:Hand;",
     };
     return systems[model] || "";
   },

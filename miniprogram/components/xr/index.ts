@@ -27,11 +27,16 @@ Component({
         this.setData({ visible: true, done: true });
       });
     },
-    persist(e) {
+    handleOverlapBegin(e) {
       console.info(e);
     },
-    overlap(e) {
-      console.info(e);
+    handleTick({ detail }) {
+      const xrFrameSystem = wx.getXrFrameSystem();
+      this.tracker = this.scene
+        ?.getElementById("tracker")
+        ?.getComponent(xrFrameSystem.ARTracker);
+      if (this.tracker) {
+      }
     },
   },
 });
