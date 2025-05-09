@@ -5,7 +5,7 @@
 	<xr-camera id="camera"  is-ar-camera background="ar" clear-color="0.4 0.8 0.6 1"/>
 
 	<!-- 平面追踪 -->
-	<xr-node wx:if="model === 'planeMode'">
+	<xr-node >
 		<xr-assets bind:loaded="handleAssetsLoaded">
 			<xr-asset-load type="gltf" asset-id="anchor" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/ar-plane-marker.glb" />
 			<xr-asset-load type="gltf" asset-id="miku" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb" />

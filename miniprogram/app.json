@@ -1,8 +1,6 @@
 {
   "component": true,
   "lazyCodeLoading": "requiredComponents",
-  "pages": [
-    "pages/index/index"
-  ],
+  "pages": ["pages/hand/index", "pages/index/index"],
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,11 @@
+<xr-scene ar-system="modes:Hand;">
+	<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
+	<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
+	<xr-camera id="camera" is-ar-camera background="ar" clear-color="0.4 0.8 0.6 1"/>
+	 <xr-ar-tracker id="tracker" mode="Hand" auto-sync="4">
+    <xr-gltf model="cool-star" anim-autoplay />
+  </xr-ar-tracker>
+	 <xr-assets >
+    <xr-asset-load type="gltf" asset-id="cool-star" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/cool-star.glb" />
+  </xr-assets>
+</xr-scene>

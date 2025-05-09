@@ -23,11 +23,6 @@ Page({
       renderHeight: screenHeight,
     });
   },
-  onShow() {
-    this.changeModel({
-      detail: { currentTarget: { dataset: { model: "planeMode" } } },
-    });
-  },
   changeModel(e: {
     detail: { currentTarget: { dataset: { model: string } } };
   }) {

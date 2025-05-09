@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "hand-xr": "../../components/hand/index"
+  }
+}
