@@ -33,7 +33,6 @@ Page({
   }) {
     const model = e?.detail?.currentTarget?.dataset?.model ?? "";
     const arSystem = this.setSystem(model);
-    console.info(arSystem, model);
     this.setData({ model, arSystem });
   },
   setSystem(model: string): string {
@@ -43,7 +42,7 @@ Page({
       face: "modes:Face;camera:Front;",
       OSD: "modes:OSD;",
       physics: "",
-      hand: "modes:Hand;",
+      hand: "modes:Hand",
     };
     return systems[model] || "";
   },
