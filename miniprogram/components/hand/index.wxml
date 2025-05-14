@@ -1,8 +1,8 @@
-<xr-scene ar-system="modes:Hand;">
+<xr-scene ar-system="modes:Hand;"  bind:ready="handleReady"  bind:ar-ready="handleReady" >
 	<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
 	<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
-	<xr-camera id="camera" is-ar-camera background="ar" clear-color="0.4 0.8 0.6 1"/>
-	 <xr-ar-tracker id="tracker" mode="Hand" auto-sync="4">
+	<xr-camera id="camera" is-ar-camera background="ar" />
+	<xr-ar-tracker id="tracker" mode="Hand" auto-sync="4">
     <xr-gltf model="cool-star" anim-autoplay />
   </xr-ar-tracker>
 	 <xr-assets >

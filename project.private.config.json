@@ -20,5 +20,24 @@
     "bigPackageSizeSupport": false
   },
   "libVersion": "3.8.2",
-  "condition": {}
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "手势识别",
+          "pathName": "pages/hand/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        },
+        {
+          "name": "平面追踪",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
