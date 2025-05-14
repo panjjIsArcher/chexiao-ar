@@ -1,4 +1,4 @@
-<xr-scene ar-system="modes:Hand" bind:ready="handleReady" bind:tick="handleTick">
+<xr-scene ar-system="modes:Hand;;pose3d: true;" bind:ready="handleReady" bind:tick="handleTick">
 	<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
 	<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
 	<xr-assets >

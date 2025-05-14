@@ -24,11 +24,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "手势识别",
-          "pathName": "pages/hand/index",
+          "name": "躯体识别",
+          "pathName": "pages/body/index",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "手势识别",
+          "pathName": "pages/hand/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "平面追踪",
