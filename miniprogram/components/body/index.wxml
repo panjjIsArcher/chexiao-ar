@@ -11,6 +11,6 @@
     background="ar" is-ar-camera 
   />
 	<xr-ar-tracker  id='tracker' mode="Body" auto-sync="2">
-    <xr-gltf wx:if="{{loaded}}" id="tool"  model="tool" />
+    <xr-gltf wx:if="{{loaded}}" id="tool"  model="tool" position="0 1 0"/>
 	</xr-ar-tracker>
 </xr-scene>

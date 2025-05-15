@@ -24,11 +24,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "躯体识别",
-          "pathName": "pages/body/index",
+          "name": "脸部识别",
+          "pathName": "pages/face/index",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "躯体识别",
+          "pathName": "pages/body/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "手势识别",
