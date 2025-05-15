@@ -1,1 +1,6 @@
-<face-xr width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />
+<face-xr width="{{renderWidth}}" height="{{renderHeight}}" model="{{model}}" style="width:{{renderWidth}}px;height:{{renderHeight - 140}}px" />
+<view class="btns">
+	<button data-model="''" bindtap="changeModel">不显示</button>
+	<button data-model="tool" bindtap="changeModel">头盔</button>
+	<button data-model="glasses" bindtap="changeModel">眼镜</button>
+</view>

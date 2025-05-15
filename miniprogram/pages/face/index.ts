@@ -13,4 +13,7 @@ Page({
       renderHeight: screenHeight,
     });
   },
+  changeModel(e: { currentTarget: { dataset: { model: string } } }) {
+    this.setData({ model: e.currentTarget.dataset.model });
+  },
 });
