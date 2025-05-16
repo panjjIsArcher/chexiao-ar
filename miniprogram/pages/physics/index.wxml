@@ -1,1 +1,1 @@
-<xr-physics  width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />
+<xr-physics width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />

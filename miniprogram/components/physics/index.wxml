@@ -1,0 +1,17 @@
+<xr-scene  bind:ready="handleReady"  >
+    <xr-physics />
+		<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
+		<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
+		
+	
+		<xr-mesh					
+		  rigidbody="mass:10;disabled:false;useGravity:false;" 
+			cube-shape shape-gizmo  shape-interact="collide: true;bounciness:1;staticFriction:1;dynamicFriction:1"
+			position="0 -1 0" scale="3 2 3" receive-shadow node-id="plane" id="plane"
+			geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1"
+			bind:collide-exit="beginCollide"
+		/>
+
+		<!-- 摄像机放在最后才能显示 -->
+		<xr-camera id="camera" clear-color="0.4 0.8 0.6 1"  target="plane"  position="0 1 4" camera-orbit-control/>
+</xr-scene>

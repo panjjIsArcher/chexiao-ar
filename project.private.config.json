@@ -24,11 +24,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "脸部识别",
-          "pathName": "pages/face/index",
+          "name": "物理刚体",
+          "pathName": "pages/physics/index",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "脸部识别",
+          "pathName": "pages/face/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "躯体识别",
