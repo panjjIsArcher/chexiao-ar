@@ -1,1 +1,5 @@
-<xr-basic width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />
+<xr-basic width="{{renderWidth}}" config="{{config}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight - 150}}px" />
+<view class="btns">
+	<view class="btn" bind:tap='changeShadow'>阴影{{config.shadow?'关闭':'开启'}}</view>	
+</view>
+	

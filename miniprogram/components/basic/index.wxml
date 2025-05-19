@@ -3,11 +3,13 @@
 		<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
 
 		<xr-mesh					
-			position="0 -1 0" scale="3 2 3" shadow node-id="plane" id="plane"
-			geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1"
+			position="0 -1 0" scale="5 2 5" shadow node-id="plane" id="plane" receive-shadow="{{config.shadow}}"
+			geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" 
 		/>
 
-		<xr-mesh  receive-shadow node-id="cube" id="cube" geometry="cube" uniforms="u_baseColorFactor:0 0.6 0.8 1"/>
+		<xr-mesh cast-shadow scale="0.3 0.3 0.3" position="0.7 0 0.7" node-id="sphere" id="sphere" geometry="sphere" uniforms="u_baseColorFactor:0 0.1 0.3 1"/>
+		<xr-mesh cast-shadow scale="0.5 0.5 0.5" node-id="cube" id="cube" geometry="cube" uniforms="u_baseColorFactor:0 0.6 0.8 1"/>
+		
 		<!-- 摄像机放在最后才能显示 -->
 		<xr-camera id="camera" clear-color="0.1 0.3 0.1 0.1" target="cube" position="0 1 4" camera-orbit-control/>
 </xr-scene>

@@ -1,1 +1,15 @@
-/* pages/basic/index.wxss */
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: rgba(0, 0, 0, 0.6);
+  .btn {
+    border: 1px solid #ccc;
+    padding: 15rpx 0;
+    flex: 1;
+    text-align: center;
+    &:active,
+    &:focus {
+      background-color: #ccc;
+    }
+  }
+}
