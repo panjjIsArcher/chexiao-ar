@@ -5,6 +5,7 @@ Page({
     config: {
       shadow: false,
       material: false,
+      env: false,
     },
     material: "",
   },
@@ -23,6 +24,16 @@ Page({
         material: material ? true : !this.data.config.material,
       },
       material: material || "",
+    });
+  },
+  changeEnv() {
+    const env = !this.data.config.env;
+
+    this.setData({
+      config: {
+        ...this.data.config,
+        env,
+      },
     });
   },
   onLoad() {
