@@ -1,2 +1,1 @@
-<!--pages/basic/index.wxml-->
-<text>pages/basic/index.wxml</text>
+<xr-basic width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />

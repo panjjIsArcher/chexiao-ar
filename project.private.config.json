@@ -25,7 +25,7 @@
       "list": [
         {
           "name": "基本功能",
-          "pathName": "pages/hand/index",
+          "pathName": "pages/basic/index",
           "query": "",
           "scene": null,
           "launchMode": "default"
