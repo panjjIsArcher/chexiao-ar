@@ -2,13 +2,20 @@
 	  <xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
 		<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
 
+		<xr-assets>
+			<xr-asset-load type="texture" id="wood" asset-id="wood" 
+			src="https://img0.baidu.com/it/u=220310632,3959725135&fm=253&fmt=auto&app=138&f=JPEG" />
+			<xr-asset-load type="texture" id="stone" asset-id="stone" 
+			src="https://img2.baidu.com/it/u=937728825,953609163&fm=253&fmt=auto&app=138&f=JPEG" />
+		</xr-assets>
+
 		<xr-mesh					
 			position="0 -1 0" scale="5 2 5" shadow node-id="plane" id="plane" receive-shadow="{{config.shadow}}"
 			geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" 
 		/>
 
-		<xr-mesh cast-shadow scale="0.3 0.3 0.3" position="0.7 0 0.7" node-id="sphere" id="sphere" geometry="sphere" uniforms="u_baseColorFactor:0 0.1 0.3 1"/>
-		<xr-mesh cast-shadow scale="0.5 0.5 0.5" node-id="cube" id="cube" geometry="cube" uniforms="u_baseColorFactor:0 0.6 0.8 1"/>
+		<xr-mesh cast-shadow scale="0.3 0.3 0.3" position="0.7 0 0.7" node-id="sphere" id="sphere" geometry="sphere" uniforms="{{ materialName }}"/>
+		<xr-mesh cast-shadow scale="0.5 0.5 0.5" node-id="cube" id="cube" geometry="cube" uniforms="{{ materialName }}"/>
 		
 		<!-- 摄像机放在最后才能显示 -->
 		<xr-camera id="camera" clear-color="0.1 0.3 0.1 0.1" target="cube" position="0 1 4" camera-orbit-control/>
