@@ -7,7 +7,8 @@
     "pages/face/index",
     "pages/body/index",
     "pages/physics/index",
-    "pages/basic/index"
+    "pages/basic/index",
+    "pages/skybox/index"
   ],
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,1 @@
+<xr-skybox  width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />

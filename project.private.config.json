@@ -24,11 +24,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "基本功能",
-          "pathName": "pages/basic/index",
+          "name": "裸眼VR",
+          "pathName": "pages/skybox/index",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "基本功能",
+          "pathName": "pages/basic/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "物理刚体",
