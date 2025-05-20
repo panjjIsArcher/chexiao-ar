@@ -19,6 +19,4 @@ Component({
   data: {
     materialName: "",
   },
-
-  methods: {},
 });

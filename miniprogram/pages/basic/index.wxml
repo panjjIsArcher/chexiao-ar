@@ -5,7 +5,7 @@
 	<view class="btn" bind:tap='changeMaterial'>纹理材质</view>	
 	<view wx:if="{{ config.material }}" class='btn' bind:tap='changeMaterial' data-material="wood">木头</view>
 	<view wx:if="{{ config.material }}" class='btn' bind:tap='changeMaterial' data-material="stone">石头</view>
-
-	<view class="btn" bind:tap='changeEnv'>环境纹理</view>	
+ 	<view	wx:if="{{ config.material }}" class="btn" bind:tap="changeMaterial" data-material="glasses">玻璃</view>
+	
 </view>
 	

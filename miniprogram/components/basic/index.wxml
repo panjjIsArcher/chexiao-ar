@@ -7,11 +7,14 @@
 			src="https://img0.baidu.com/it/u=220310632,3959725135&fm=253&fmt=auto&app=138&f=JPEG" />
 			<xr-asset-load type="texture" id="stone" asset-id="stone" 
 			src="https://img2.baidu.com/it/u=937728825,953609163&fm=253&fmt=auto&app=138&f=JPEG" />
+			<xr-asset-load type="texture" id="glasses" asset-id="glasses"
+			src="https://img2.baidu.com/it/u=2945433161,1048111851&fm=253&fmt=auto&app=138&f=JPEG" />
+			
 		</xr-assets>
 
-		<xr-mesh					
+		<xr-mesh
 			position="0 -1 0" scale="5 2 5" shadow node-id="plane" id="plane" receive-shadow="{{config.shadow}}"
-			geometry="plane" uniforms="u_baseColorFactor:0.4 0.6 0.8 1" 
+			geometry="plane" uniforms="{{ materialName }}"
 		/>
 
 		<xr-mesh cast-shadow scale="0.3 0.3 0.3" position="0.7 0 0.7" node-id="sphere" id="sphere" geometry="sphere" uniforms="{{ materialName }}"/>

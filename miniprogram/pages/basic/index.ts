@@ -28,12 +28,8 @@ Page({
   },
   changeEnv() {
     const env = !this.data.config.env;
-
     this.setData({
-      config: {
-        ...this.data.config,
-        env,
-      },
+      config: { ...this.data.config, env },
     });
   },
   onLoad() {
