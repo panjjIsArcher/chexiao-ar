@@ -1,4 +1,4 @@
-<xr-basic width="{{renderWidth}}" config="{{config}}" height="{{renderHeight}}"  material="{{ material }}" style="width:{{renderWidth}}px;height:{{renderHeight - 150}}px" />
+<xr-basic width="{{renderWidth}}" config="{{config}}" height="{{renderHeight}}" process="{{ process }}"  material="{{ material }}" style="width:{{renderWidth}}px;height:{{renderHeight - 150}}px" />
 <view class="btns">
 	<view class="btn" bind:tap='changeShadow'>阴影{{config.shadow?'关闭':'开启'}}</view>	
 	
@@ -7,5 +7,8 @@
 	<view wx:if="{{ config.material }}" class='btn' bind:tap='changeMaterial' data-material="stone">石头</view>
  	<view	wx:if="{{ config.material }}" class="btn" bind:tap="changeMaterial" data-material="glasses">玻璃</view>
 	<view	wx:if="{{ config.material }}" class="btn" bind:tap="changeMaterial" data-material="video">视频纹理</view>
+
+	<view class="btn" bind:tap="changeProcess" data-process="">后处理</view>
+	<view	wx:if="{{ config.process }}" class="btn" bind:tap="changeProcess" data-process="blur">高斯模糊</view>
 </view>
 	

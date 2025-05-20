@@ -8,8 +8,15 @@ Component({
       type: String,
       value: "",
     },
+    process: {
+      type: String,
+      value: "",
+    },
   },
   observers: {
+    process(process) {
+      this.setData({ postProcess: process });
+    },
     material(material) {
       if (material === "video") {
         this.setData({ materialName: `u_baseColorMap: ${material}` });
@@ -32,13 +39,14 @@ Component({
     background: "default",
     scene: null,
     isPlay: false,
+    postProcess: "",
   },
   methods: {
     handleReady({ detail }) {
       this.data.scene = detail.value;
     },
     play() {
-      const xrSystem = wx.getXrFrameSystem();
+      if (!this.data.scene) return;
       const video = this.data.scene.assets.getAsset("video-texture", "cat");
 
       if (!video) {
