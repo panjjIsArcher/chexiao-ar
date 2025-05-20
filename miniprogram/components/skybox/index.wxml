@@ -1,2 +1,18 @@
-<!--components/skybox/index.wxml-->
-<text>components/skybox/index.wxml</text>
+<xr-scene bind:ready="handleReady">
+	<xr-light type="ambient" color="1 1 1" intensity="1" cast-shadow/> 
+	<xr-light type="directional" rotation="40 70 0" color="1 1 1" intensity="3" cast-shadow />
+  <xr-asset-load
+      type="video-texture" asset-id="skybox"
+      src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/videos/office-skybox.mp4" options="autoPlay:true,loop:true,placeHolder:https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/videos/office-skybox.jpg"
+  />
+	<xr-env sky-map="video-skybox" />  
+	<xr-node node-id="target" />
+	  <!-- 摄像机放在最后才能显示 -->
+	<xr-camera id="camera" 
+		background='skybox'
+		clear-color="0.1 0.8 0.8 0.1" 
+		position="0 0.1 0" 
+		target="target"
+		enable-gyro="true"
+		camera-orbit-control/>
+</xr-scene>

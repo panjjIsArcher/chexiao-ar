@@ -1,24 +1,20 @@
 // components/skybox/index.ts
 Component({
-
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
-  },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
+  data: { scene: null },
   methods: {
-
-  }
-})
+    handleReady({ detail }) {
+      this.data.scene = detail.value;
+      this.createSphere(detail.value);
+    },
+    createSphere(scene) {
+      const box = scene.createObject({
+        type: "sphere",
+        radius: 10,
+        segments: 64,
+        material: { map: "#videoTexture", type: "standard", side: "double" },
+      });
+      scene.add(box);
+      return box;
+    },
+  },
+});
