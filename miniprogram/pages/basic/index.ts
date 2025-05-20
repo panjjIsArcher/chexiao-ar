@@ -24,6 +24,7 @@ Page({
       config: {
         ...this.data.config,
         material: material ? true : !this.data.config.material,
+        process: false,
       },
       material: material || "",
     });
@@ -43,16 +44,6 @@ Page({
         ...this.data.config,
         process: true,
         material: false,
-      },
-    });
-    debugger;
-  },
-  changeProcess2(e: { target: { dataset: { process: string } } }) {
-    const process = e.target.dataset.process;
-    this.setData({
-      config: {
-        ...this.data.config,
-        process: process ? true : !this.data.config.process,
       },
     });
   },

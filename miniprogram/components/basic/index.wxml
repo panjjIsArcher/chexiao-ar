@@ -16,6 +16,8 @@
    		/>
 			<xr-asset-material asset-id="standard-mat" effect="standard" />
 			<xr-asset-post-process asset-id="blur" type="blur" is-hdr data="radius:10" />
+			<xr-asset-post-process asset-id="bloom" type="blur" is-hdr data="radius:30" />
+				<xr-asset-post-process asset-id="vignette" type="blur" is-hdr data="smoothness:4,color:[0,0,1,1]" />
 		</xr-assets>
 		<xr-mesh
 			position="0 -1 0" scale="5 2 5" shadow node-id="plane" id="plane" receive-shadow="{{config.shadow}}"

@@ -10,5 +10,8 @@
 
 	<view class="btn" bind:tap="changeProcess" data-process="">后处理</view>
 	<view	wx:if="{{ config.process }}" class="btn" bind:tap="changeProcess" data-process="blur">高斯模糊</view>
+	<view	wx:if="{{ config.process }}" class="btn" bind:tap="changeProcess" data-process="bloom">泛光</view>
+	<view	wx:if="{{ config.process }}" class="btn" bind:tap="changeProcess" data-process="vignette">渐晕</view>
+	
 </view>
 	
