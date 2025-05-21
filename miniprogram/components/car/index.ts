@@ -7,10 +7,13 @@ Component({
       value: "",
     },
   },
-  data: { scene: null, loaded: false },
+  data: { scene: null, loaded: false, rotation: "0 90 0" },
   methods: {
     handleReady({ detail }) {
-      this.data.scene = detail.value;
+      const scene = detail.value;
+      this.data.scene = scene;
+      this.setData({ loaded: true });
     },
+    rotateCamera(scene) {},
   },
 });
