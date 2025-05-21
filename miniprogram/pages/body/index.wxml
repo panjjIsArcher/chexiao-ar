@@ -1,1 +1,6 @@
-<body-xr width="{{renderWidth}}" height="{{renderHeight}}" style="width:{{renderWidth}}px;height:{{renderHeight}}px" />
+<body-xr width="{{renderWidth}}" height="{{renderHeight}}" body="{{body}}" style="width:{{renderWidth}}px;height:{{renderHeight - 130}}px" />
+<view class="btns">
+	<button data-body="" bindtap="changeBody">不显示</button>
+	<button data-body="clothing" bindtap="changeBody">服装</button>
+	<button data-body="bag" bindtap="changeBody">挎包</button>
+</view>

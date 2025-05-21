@@ -2,8 +2,8 @@ Page({
   data: {
     renderWidth: 0,
     renderHeight: 0,
-    model: "",
     arSystem: "modes:Plane Marker; planeMode: 1",
+    body: "",
   },
   onLoad() {
     const info = wx.getWindowInfo();
@@ -12,5 +12,8 @@ Page({
       renderWidth: screenWidth,
       renderHeight: screenHeight,
     });
+  },
+  changeBody(e: { currentTarget: { dataset: { body: any } } }) {
+    this.setData({ body: e.currentTarget.dataset.body });
   },
 });

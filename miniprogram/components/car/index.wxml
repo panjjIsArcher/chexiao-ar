@@ -14,8 +14,9 @@
 		
 		<!-- 摄像机放在最后才能显示 -->
 		<xr-camera id="camera" 
-		clear-color="0.1 0.3 0.1 0.1" 
-		target="cube" 
-		position="0 5 0" 
-		camera-orbit-control/>
+			clear-color="0.1 0.3 0.1 0.1" 
+			target="cube" 
+			position="0 5 0" 
+			camera-orbit-control
+		/>
 </xr-scene>

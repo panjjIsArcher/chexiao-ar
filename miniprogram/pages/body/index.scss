@@ -1,1 +1,10 @@
-/* pages/body/index.wxss */
+.btns {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 111;
+  button {
+    flex: 1;
+  }
+}
