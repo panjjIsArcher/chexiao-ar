@@ -8,7 +8,8 @@
     "pages/body/index",
     "pages/physics/index",
     "pages/basic/index",
-    "pages/skybox/index"
+    "pages/skybox/index",
+    "pages/car/index"
   ],
   "sitemapLocation": "sitemap.json"
 }

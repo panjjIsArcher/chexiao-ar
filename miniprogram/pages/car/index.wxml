@@ -1,0 +1,3 @@
+<xr-car width="{{renderWidth}}" height="{{renderHeight}}" 
+ class="xr-car" />
+<!-- style="width:{{renderWidth}}px;height:{{renderHeight}}px;" -->

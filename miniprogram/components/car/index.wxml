@@ -1,0 +1,6 @@
+<xr-scene bind:ready="handleReady">
+	<xr-assets></xr-assets>
+	<xr-camera
+    id="camera" node-id="camera" clear-color="0.925 0.925 0.925 1"
+  />
+</xr-scene>
