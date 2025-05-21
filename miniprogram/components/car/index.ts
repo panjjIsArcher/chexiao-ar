@@ -7,6 +7,7 @@ Component({
       value: "",
     },
   },
+  // src="https://threejs.org/examples/models/gltf/ferrari.glb"
   data: { scene: null, loaded: false, rotation: "0 90 0" },
   methods: {
     handleReady({ detail }) {
