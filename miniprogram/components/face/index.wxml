@@ -2,6 +2,7 @@
 	<xr-assets>
 		<xr-asset-load type="gltf" asset-id="glasses" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/glasses.glb" />
 		<xr-asset-load type="gltf" asset-id="tool" src="https://gw.alipayobjects.com/os/bmw-prod/a1da72a4-023e-4bb1-9629-0f4b0f6b6fc4.glb" />
+	  <xr-asset-load type="gltf" asset-id="mask" src="/assets/gltf/mask.glb" />
 	</xr-assets>
 	<xr-node node-id="lights">
     <xr-light type="ambient" color="1 1 1" intensity="1" />
@@ -14,5 +15,6 @@
 	<xr-ar-tracker id='tracker' mode="Face" auto-sync="37 43">
     <xr-gltf wx:if="{{loaded && model === 'tool'}}" id="tool"  model="tool" scale="3 3 3" position="0 6 0"/>
 		<xr-gltf wx:if="{{loaded && model === 'glasses'}}" id="glasses"  model="glasses" />
+		<xr-gltf wx:if="{{loaded && model === 'mask'}}" id="mask"  model="mask" />
 	</xr-ar-tracker>
 </xr-scene>

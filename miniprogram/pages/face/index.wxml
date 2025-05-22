@@ -3,4 +3,5 @@
 	<button data-model="''" bindtap="changeModel">不显示</button>
 	<button data-model="tool" bindtap="changeModel">头盔</button>
 	<button data-model="glasses" bindtap="changeModel">眼镜</button>
+	<button data-model="mask" bindtap="changeModel">面具</button>
 </view>
